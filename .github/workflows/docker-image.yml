@@ -28,7 +28,7 @@ jobs:
     
     - name: Build Docker Image
       run: |
-        docker build --tag $DOCKER_USER/docker-graphql:0.0.2 .
+        docker build -t $DOCKER_USER/docker-graphql:0.0.2 .
     
     - name: Pull Docker Image
       run: |
