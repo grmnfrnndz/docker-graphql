@@ -31,12 +31,14 @@ jobs:
         DOCKER_USER: ${{ secrets.DOCKER_USER }}
       run: |
         docker build --tag $DOCKER_USER/docker-graphql:0.0.2 .
+        docker build --tag $DOCKER_USER/docker-graphql:latest .
     
     - name: Pull Docker Image
       env:
         DOCKER_USER: ${{ secrets.DOCKER_USER }}
       run: |
         docker push $DOCKER_USER/docker-graphql:0.0.2
+        docker push $DOCKER_USER/docker-graphql:latest
       
     
 #     - name: Build the Docker image
